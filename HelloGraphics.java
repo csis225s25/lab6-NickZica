@@ -22,6 +22,9 @@ class GraphicsPanel extends JPanel {
         super.paintComponent(g);
 
         String str = "Hello, Java Graphics World!";
+        Font newFont = new Font("Sylfaen", Font.PLAIN, 20);
+        g.setFont(newFont);
+
 
         int width = g.getFontMetrics().stringWidth(str)/2;
         int height = g.getFontMetrics().getAscent();
@@ -30,6 +33,7 @@ class GraphicsPanel extends JPanel {
         // the Graphics object passed to this method has many methods
         // we can use to draw in the area of the panel, one of which
         // allows us to draw a String at a given x,y position
+        
         g.drawString(str, getWidth()/2 - width, getHeight()/2 - height);
         //g.drawString(str, 0, 0);
 
